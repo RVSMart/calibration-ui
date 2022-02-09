@@ -1,0 +1,146 @@
+<div class="container">
+    <div class="card m-3">
+        <h2 class="text-center">Manufacturer Registration Form</h2>
+        <div class="card-body">
+            <form [formGroup]="manufacturerForm">
+
+
+
+                <!-- 1 -->
+                <div class="form-row">
+                    <!-- supplier ID:string; -->
+                    <div class="form-group col-4">
+                        <label>Manufacturer ID</label>
+                        <input type="text" formControlName="mfgId" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.mfgId.errors }" />
+                        <div *ngIf="submitted && f.mfgId.errors" class="invalid-feedback">
+                            <div *ngIf="f.mfgId.errors.required">Manufacturer ID is required</div>
+                            <div *ngIf="f.mfgId.errors.maxlength">Manufacturer ID must be at least 20 characters</div>
+                        </div>
+                    </div>
+
+                    <!-- name:string; -->
+
+                    <div class="form-group col-4">
+                        <label>Manufacturer Name</label>
+                        <input type="text" formControlName="name" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                            <div *ngIf="f.name.errors.required">Supplier Name is required</div>
+                            <div *ngIf="f.name.errors.maxlength">Supplier Name must be at least 100 characters</div>
+                        </div>
+                    </div>
+
+                    <!-- address:string; -->
+
+                    <div class="form-group col-4">
+                        <label>Address</label>
+                        <input type="text" formControlName="address" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+                        <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                            <div *ngIf="f.address.errors.required">Address is required</div>
+                            <div *ngIf="f.address.errors.maxlength">Address must be at least 100 characters</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="form-row">
+
+                    <!-- city:string; -->
+
+                    <div class="form-group col-4">
+                        <label>City </label>
+                        <input type="text" formControlName="city" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.city.errors }" />
+                        <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                            <div *ngIf="f.city.errors.required">City is required</div>
+                            <div *ngIf="f.city.errors.maxlength">City must be at least 20 characters</div>
+                        </div>
+                    </div>
+
+                    <!-- state:string; -->
+
+                    <div class="form-group col-4">
+                        <label>State</label>
+                        <input type="text" formControlName="state" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.state.errors }" />
+                        <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+                            <div *ngIf="f.state.errors.required">State Name is required</div>
+                            <div *ngIf="f.state.errors.maxlength">State must be at least 100 characters</div>
+                        </div>
+                    </div>
+
+
+                    <!-- country:string; -->
+
+
+                    <div class="form-group col-4">
+                        <label>Country</label>
+                        <input type="text" formControlName="country" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.country.errors }" />
+                        <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+                            <div *ngIf="f.country.errors.required">Country is required</div>
+                            <div *ngIf="f.country.errors.maxlength">Country must be at least 100 characters</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+
+
+
+                    <!-- pincode:string; -->
+                    
+                    <div class="form-group col-3">
+                        <label>Zipcode </label>
+                        <input type="text" formControlName="pincode" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.pincode.errors }" />
+                        <div *ngIf="submitted && f.pincode.errors" class="invalid-feedback">
+                            <div *ngIf="f.pincode.errors.required">Zipcode is required</div>
+                            <div *ngIf="f.pincode.errors.maxlength">Zipcode must be at least 20 characters</div>
+                        </div>
+                    </div>
+
+                <!-- contactno:string; -->
+
+                <div class="form-group col-3">
+                    <label>Contact No </label>
+                    <input type="text" formControlName="pincode" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.contactno.errors }" />
+                    <div *ngIf="submitted && f.contactno.errors" class="invalid-feedback">
+                        <div *ngIf="f.contactno.errors.required">Contact Number is required</div>
+                        <div *ngIf="f.contactno.errors.maxlength">Contact Number must be at least 20 characters</div>
+                    </div>
+                </div>
+
+                <!-- email:string; -->
+                <div class="form-group col-3">
+                    <label>Email </label>
+                    <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.maxlength">Email must be at least 100 characters</div>
+                    </div>
+                </div>
+
+                <!-- fax:string; -->
+
+                <div class="form-group col-3">
+                    <label>Fax No </label>
+                    <input type="text" formControlName="fax" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fax.errors }" />
+                    <div *ngIf="submitted && f.fax.errors" class="invalid-feedback">
+                        <div *ngIf="f.fax.errors.required">Fax is required</div>
+                        <div *ngIf="f.fax.errors.maxlength">Fax must be at least 20 characters</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary mr-1" (click)="onSubmit()" style="width: 49%;">Register</button>
+                <button class="btn btn-secondary" type="reset" (click)="onReset()" style="width: 49%;">Clear</button>
+            </div>
+
+            </form>
+        </div>
+    </div>
+</div>

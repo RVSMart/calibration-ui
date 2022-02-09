@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-row:nth-child(even){
+    background-color: red;
+}
+        
+.mat-row:nth-child(odd){
+    background-color: black;
+}
+
+li { cursor: pointer; }

@@ -1,0 +1,25 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+        <mat-toolbar color="primary">Login Page</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="loginForm">
+            <mat-form-field appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username" 
+                formControlName="username"
+                required autofocus>
+            </mat-form-field>
+
+            <mat-form-field  appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" placeholder="Password"
+                formControlName="password"
+                required autofocus>
+            </mat-form-field>
+
+            <button mat-raised-button (click)="onSubmit()" >Login</button>
+            <div class="pass">
+                Forgot Password?                
+            </div>
+        </form>
+    </mat-card>
+</div> 

@@ -1,0 +1,187 @@
+<div class="container">
+    <div class="card m-3">
+        <h2 class="text-center">Instrument Registration Form</h2>
+        <div class="card-body">
+            <form [formGroup]="instForm">
+
+
+                <div class="form-row">
+
+                    <!-- deptid:string; -->
+
+                    <div class="form-group col-4">
+                        <label>Category</label>
+                        <input type="text" formControlName="category" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.category.errors }" />
+                        <div *ngIf="submitted && f.category.errors" class="invalid-feedback">
+                            <div *ngIf="f.category.errors.required">Category is required</div>
+                            <div *ngIf="f.category.errors.maxlength">Category must be at least 20 characters</div>
+                        </div>
+                    </div>
+
+                    <!-- name:string; -->
+
+                    <div class="form-group col-4">
+                        <label>Instrument Name</label>
+                        <input type="text" formControlName="name" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                            <div *ngIf="f.name.errors.required">Name is required</div>
+                            <div *ngIf="f.name.errors.maxlength">Name must be at least 100 characters</div>
+                        </div>
+                    </div>
+
+
+                    <!-- Instrument ID:string; -->
+                    <div class="form-group col-4">
+                        <label>Instrument ID</label>
+                        <input type="text" formControlName="instID" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.instID.errors }" />
+                        <div *ngIf="submitted && f.instID.errors" class="invalid-feedback">
+                            <div *ngIf="f.instID.errors.required">Instrument ID is required</div>
+                            <div *ngIf="f.instID.errors.maxlength">Instrument ID must be at least 100 characters</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+
+                    <!-- Manufacturer:string; -->
+                    <div class="form-group col-4">
+                        <label>Manufacturer</label>
+                        <input type="text" formControlName="mfg" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.mfg.errors }" />
+                        <div *ngIf="submitted && f.mfg.errors" class="invalid-feedback">
+                            <div *ngIf="f.mfg.errors.required">Manufacturer is required</div>
+                            <div *ngIf="f.mfg.errors.maxlength">Manufacturer must be at least 20 characters</div>
+                        </div>
+                    </div>
+
+                    <!-- model:string; -->
+
+
+                    <div class="form-group col-4">
+                        <label>Model</label>
+                        <input type="text" formControlName="model" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.model.errors }" />
+                        <div *ngIf="submitted && f.model.errors" class="invalid-feedback">
+                            <div *ngIf="f.model.errors.required">Model is required</div>
+                            <div *ngIf="f.model.errors.maxlength">Model must be at least 100 characters</div>
+                        </div>
+                    </div>
+
+                    <!-- supplier:string; -->
+                    <div class="form-group col-4">
+                        <label>Supplier</label>
+                        <input type="text" formControlName="supplier" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.supplier.errors }" />
+                        <div *ngIf="submitted && f.supplier.errors" class="invalid-feedback">
+                            <div *ngIf="f.supplier.errors.required">Supplier is required</div>
+                            <div *ngIf="f.supplier.errors.maxlength">Supplier must be at least 20 characters</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+
+                    <!-- serialNo:string; -->
+                    <div class="form-group col-4">
+                        <label>Serial No</label>
+                        <input type="text" formControlName="serialNo" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.serialNo.errors }" />
+                        <div *ngIf="submitted && f.serialNo.errors" class="invalid-feedback">
+                            <div *ngIf="f.serialNo.errors.required">Serial No is required</div>
+                            <div *ngIf="f.serialNo.errors.maxlength">Serial No must be at least 20 characters</div>
+                        </div>
+                    </div>
+
+                    <!-- installedAt:string; -->
+
+
+                    <div class="form-group col-4">
+                        <label>Location</label>
+                        <input type="text" formControlName="installedAt" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.installedAt.errors }" />
+                        <div *ngIf="submitted && f.installedAt.errors" class="invalid-feedback">
+                            <div *ngIf="f.installedAt.errors.required">Location is required</div>
+                            <div *ngIf="f.installedAt.errors.maxlength">Location must be at least 100 characters</div>
+                        </div>
+                    </div>
+
+                    <!-- department:string; -->
+                    <div class="form-group col-4">
+                        <label>Department</label>
+                        <input type="text" formControlName="department" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.department.errors }" />
+                        <div *ngIf="submitted && f.department.errors" class="invalid-feedback">
+                            <div *ngIf="f.department.errors.required">Department is required</div>
+                            <div *ngIf="f.department.errors.maxlength">Department must be at least 20 characters</div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="form-row">
+
+                    <!-- Manufacturer:string; -->
+                    <div class="form-group col-4">
+                        <label>Installed Date</label>
+                        <input type="date" formControlName="installeddt" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.installeddt.errors }" />
+                        <div *ngIf="submitted && f.installeddt.errors" class="invalid-feedback">
+                            <div *ngIf="f.installeddt.errors.required">installed date is required</div>
+                            <div *ngIf="f.installeddt.errors.maxlength">installed date must be at least 20 characters
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- model:string; -->
+
+
+                    <div class="form-group col-4">
+                        <label>Expiry Date</label>
+                        <input type="date" formControlName="expiryDt" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.expiryDt.errors }" />
+                        <div *ngIf="submitted && f.expiryDt.errors" class="invalid-feedback">
+                            <div *ngIf="f.expiryDt.errors.required">Expiry Date is required</div>
+                            <div *ngIf="f.expiryDt.errors.maxlength">Expiry Date must be at least 100 characters</div>
+                        </div>
+                    </div>
+
+                    <!-- supplier:string; -->
+
+                    <!-- <select class="custom-select">
+                        <option selected>Open this select menu</option>
+                        <option value="1">Initiated</option>
+                        <option value="2">Pending</option>
+                        <option value="3">Activated</option>
+                        <option value="4">Disable</option>
+                      </select> -->
+
+
+                    <div class="form-group col-4">
+                        <label>status</label>
+                        <input type="text" formControlName="status" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.status.errors }" />
+                        <div *ngIf="submitted && f.status.errors" class="invalid-feedback">
+                            <div *ngIf="f.status.errors.required">Status is required</div>
+                            <div *ngIf="f.status.errors.maxlength">Status must be at least 20 characters</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="text-center">
+                    <button class="btn btn-primary mr-1" (click)="onSubmit()" style="width: 49%;">Register</button>
+                    <button class="btn btn-secondary" type="reset" (click)="onReset()"
+                        style="width: 49%;">Clear</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

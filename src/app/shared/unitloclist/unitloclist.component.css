@@ -1,0 +1,26 @@
+
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+      /* background-color: #f2f2f2; */
+
+      background-color: #CC9999;;
+
+      color: black;
+    
+    
+    }
+
+    tr:hover {
+        background-color: lightgreen;
+        cursor: pointer;
+    }

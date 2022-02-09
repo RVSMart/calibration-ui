@@ -1,0 +1,23 @@
+@import "../node_modules/@angular/material/theming";
+
+@include mat-core();
+
+$my-primary: mat-alette( $mat-teal, 800);
+
+$my-accent : mat-alette( $mat-light-green, 800);
+
+$my-theam: mat-light-theam($my-primary, $my-accent);
+
+@include angular-material-theme($my-theam);
+
+.alternative{
+  
+
+$my-primary: mat-alette( $mat-teal, 800);
+
+$my-accent : mat-alette( $mat-light-green, 800);
+
+$my-theam: mat-light-theam($my-primary, $my-accent);
+
+@include angular-material-theme($my-theam);
+}

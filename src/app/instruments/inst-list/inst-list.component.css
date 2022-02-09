@@ -1,0 +1,75 @@
+table {
+    width: 100%;
+  }
+  
+
+  th.mat-sort-header-sorted{
+    color: black;
+  }
+
+  .mat-sort-header-button{
+    outline: outset;
+  }
+
+  .mat-header-row{
+    min-height: 50px;
+  }
+
+  .mat-sort-header-content{
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden;
+    align-self: stretch;
+  }
+
+  ::ng-deep .mat-sort-header-container{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    letter-spacing: normal;
+    outline: 0;
+    color: black;
+  }
+
+  mat-form-field{
+    display: block;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .mat-row, mat-footer-row{
+    min-height: 32px;
+    border-bottom-width: 0px;
+  }
+
+
+
+
+  .mat-row:nth-child(even){
+    background-color: wheat;
+  }
+  .mat-row:nth-child(odd){
+    background-color: wheat;
+  }
+
+  .mat-cell-row{
+    font-style: initial;
+    font-family: inherit;
+    font-size: 14px;
+    color: black;
+  }
+
+
+  /* th{
+    width: 100%;
+  } */
+
+  mat-cell, mat-footer-cell{
+    flex: 1;
+    display: initial; align-items: center; overflow-x: auto; overflow-y: hidden; word-wrap: break-word ; min-height: inherit;
+    justify-items: start;
+    text-align: center !important;
+  }
+  

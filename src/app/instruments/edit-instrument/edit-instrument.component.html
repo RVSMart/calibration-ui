@@ -1,0 +1,56 @@
+<h1 matDialogTitle>Instrument {{instID}} Details</h1>
+
+<mat-dialog-content>
+
+
+    <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+              <th>category</th>
+              <th>Name</th>
+              <th>Manufacturer</th>
+              <th>Model</th>
+              <th>Supplier</th>
+              <th>Serial No</th>
+              
+              <th>Location</th>
+              <th>Department</th>
+              <th>Installed Date</th>
+              <th>Expiry Date</th>
+              <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+    
+           <td> <label>{{ category }}  </label> </td>
+           <td><label>{{ name  }} </label></td>
+            <td> <label>{{ mfg }} </label></td>
+           <td><label>{{ model }} </label></td>
+            <td> <label>{{ supplier }} </label></td>
+           <td><label>{{ serialNo  }} </label></td>
+           <td> <label>{{ installedAt }} </label></td>
+           <td> <label>{{ department }}  </label></td>
+           <td> <label>{{ installeddt }}  </label></td>
+            <td><label>{{ expiryDt }} </label></td>
+           <td><label>{{ status}} </label></td>
+           
+           
+            
+            
+        
+           
+        </tbody>
+    </table>
+
+   
+   
+</mat-dialog-content>
+
+<br>
+<mat-dialog-actions>
+    <button mat-button matDialogClose>Close dialog</button>
+    <button mat-button>Action</button>
+    
+</mat-dialog-actions>
+
+
