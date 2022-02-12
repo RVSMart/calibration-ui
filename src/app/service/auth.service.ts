@@ -20,7 +20,7 @@ const httpOptions = {
 };
 
 
-const jwt  = new JwtHelperService();
+
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +38,12 @@ export class AuthService {
   public currentUser ?: Observable<User>;
 
   private decokdeToken : any;
+
+  jwt  = new JwtHelperService();
+
+  expToken: any;
+  tokenPayload: any;
+  expirationDate: any;
   
 
   isAuthenicated = false;
@@ -88,11 +94,12 @@ export class AuthService {
     console.log("Password " , signin.getPassword());
 
      return this.http.post<string>(`${this.API_URL}/authenticate`,signin, httpOptions)
-     .pipe( map( (user : any) => {
-       localStorage.setItem('USER_TOKEN', JSON.stringify(user));
+     .pipe( map( (jwt_token : any) => {
+       //localStorage.setItem('USER_TOKEN', JSON.stringify(jwt_token));
       //  this.currentUserSubject.next(user);
-      this.saveToken(user);
-       return user;
+      console.log("abcd : " + jwt_token.jwtToken);
+      this.saveToken(jwt_token.jwtToken);
+       return jwt_token;
      }))
      ;
 
@@ -111,10 +118,21 @@ export class AuthService {
   }
 
   private saveToken(token:any) : any{
-    console.log(token);
-      this.decokdeToken = jwt.decodeToken(token);
-      localStorage.setItem('USER_TOKEN', token);
-      localStorage.setItem('AUTH_META', JSON.stringify(this.decokdeToken));
+    console.log("Line 119" + token);
+      const accessToken = this.jwt.decodeToken(token);
+     // localStorage.setItem('USER_TOKEN', token);
+     // localStorage.setItem('AUTH_META', JSON.stringify(this.decokdeToken));
+      
+     // console.log("pqr " + this.decokdeToken); 
+     console.log("sub " + accessToken);
+     console.log("sub " + accessToken.sub);
+     const roles  = accessToken.roles[0].authority;
+     console.log( "Roles : " + roles);
+     console.log("exp " + accessToken.exp);
+     console.log("iat " + accessToken.iat);
+    console.log("----------------");
+    
+     
       return token;
   }
 

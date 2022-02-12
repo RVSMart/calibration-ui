@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ErrorHandler, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Signindata } from '../model/signindata';
 import { AuthService } from '../service/auth.service';
@@ -42,9 +42,9 @@ export class LoginComponent implements OnInit {
     this.service.authenticate(signIn).subscribe(
       (data) => {
         this.retVlue = data;
-        console.log(data);
+       
       },
-      (error) => {
+      (error:ErrorHandler) => {
         console.log(error);
       }
     );
